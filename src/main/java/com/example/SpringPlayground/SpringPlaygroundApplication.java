@@ -10,15 +10,14 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class SpringPlaygroundApplication {
 
-	@Autowired
-	static TestModel testModel;
+	static TestModel testBean;
 
 	static ConfigurableApplicationContext context;
 
 	public static void main(String[] args) {
 		context = SpringApplication.run(SpringPlaygroundApplication.class, args);
-		TestModel test = (TestModel)context.getBean("testBean");
-		System.out.println(test.value);
+//		TestModel test = (TestModel)context.getBean("testBean");
+
 	}
 
 }
